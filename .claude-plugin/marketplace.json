@@ -1,15 +1,15 @@
 {
-  "name": "financial-skills",
+  "name": "claude-marketplace",
   "owner": {
     "name": "Enareto LLC"
   },
   "metadata": {
-    "description": "Financial planning skills for retirement projections, cash flow analysis, and tax-optimized withdrawal strategies"
+    "description": "A set of plugins for retirement planning and financial projections."
   },
   "plugins": [
     {
       "name": "financial-skills",
-      "source": "./",
+      "source": "./plugins",
       "description": "Retirement projections with Monte Carlo simulation, tax-optimized withdrawal strategies, and cash flow analysis",
       "version": "0.1.0"
     }
