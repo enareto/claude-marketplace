@@ -19,7 +19,12 @@ Install the financial skills plugin:
 /plugin install financial-skills@enareto-tools
 ```
 
-Once installed, the skill activates automatically when Claude detects a relevant retirement planning question.
+Once installed, the skill activates automatically when Claude detects a relevant retirement planning question. You can also invoke it explicitly:
+
+```
+/retirement-projections
+/retirement-projections couple, ages 55 and 52, want to retire at 60
+```
 
 ## Available Plugins
 
@@ -48,6 +53,8 @@ enareto-tools/
 │   └── financial-skills/
 │       ├── .claude-plugin/
 │       │   └── plugin.json       # Plugin manifest
+│       ├── commands/
+│       │   └── retirement-projections.md  # Slash command
 │       └── skills/
 │           └── retirement-projections/
 │               ├── SKILL.md      # Skill definition and workflow
