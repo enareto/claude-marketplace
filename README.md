@@ -1,12 +1,26 @@
-# Financial Skills
+# Enareto Tools
 
-A [Claude Code plugin](https://docs.anthropic.com/en/docs/claude-code) providing specialized financial planning skills. Each skill encodes domain expertise, modeling standards, and validation tooling that prevent common errors in financial modeling.
+A plugin marketplace for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and [Claude Cowork](https://claude.com/cowork) providing specialized financial planning skills. Each skill encodes domain expertise, modeling standards, and validation tooling that prevent common errors in financial modeling.
 
-This plugin currently includes one skill, with more planned:
+## Installation
 
-## Available Skills
+Add the marketplace:
 
-### Retirement Projections
+```bash
+/plugin marketplace add enareto/enareto-tools
+```
+
+Install the financial skills plugin:
+
+```bash
+/plugin install financial-skills@enareto-tools
+```
+
+Once installed, the skill activates automatically when Claude detects a relevant retirement planning question.
+
+## Available Plugins
+
+### financial-skills
 
 Comprehensive retirement financial planning with cash flow projections, Monte Carlo analysis, tax-optimized withdrawal strategies, and historical backtesting.
 
@@ -21,25 +35,23 @@ What it covers:
 
 Trigger phrases: "can I retire", "retirement plan", "financial plan", "withdrawal strategy", "Roth conversion", "4% rule", "Monte Carlo", "how much do I need to retire", and more.
 
-## Installation
-
-```bash
-claude plugin add github:enareto/financial-skills
-```
-
-Once installed, the skill activates automatically when Claude detects a relevant retirement planning question.
-
 ## Structure
 
 ```
-financial-skills/
+enareto-tools/
 ├── .claude-plugin/
-│   └── plugin.json
-└── skills/
-    └── retirement-projections/
-        ├── SKILL.md              # Skill definition and workflow
-        ├── references/           # Tax rules, strategies, return data
-        └── scripts/              # Model validation and backtesting
+│   └── marketplace.json          # Marketplace definition
+├── plugins/
+│   └── financial-skills/
+│       ├── .claude-plugin/
+│       │   └── plugin.json       # Plugin manifest
+│       └── skills/
+│           └── retirement-projections/
+│               ├── SKILL.md      # Skill definition and workflow
+│               ├── references/   # Tax rules, strategies, return data
+│               └── scripts/      # Model validation and backtesting
+├── LICENSE
+└── README.md
 ```
 
 ## License
