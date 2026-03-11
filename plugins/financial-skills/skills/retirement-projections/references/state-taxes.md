@@ -1,5 +1,7 @@
 # State Income Tax Reference
 
+> **Bracket vintage: 2025.** State brackets, rates, and deductions reflect approximate 2025 values. States adjust annually for inflation — inflate thresholds at ~2%/year for future projection years. Structure (number of brackets, rate levels) changes rarely.
+
 ## Overview
 
 State income tax varies enormously — from 0% (nine states) to 13.3% (California top bracket). Using a flat 5% default can be off by $10-30K/year depending on the state and income level. This reference provides the complete bracket structure for all 50 states and DC.

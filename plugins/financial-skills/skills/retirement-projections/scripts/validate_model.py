@@ -224,7 +224,7 @@ def validate(projections, retirement_year=12):
     print("MODEL VALIDATION RESULTS")
     print("=" * 70)
     for status, check, detail in results:
-        icon = "✓" if status == "PASS" else ("✗" if status == "FAIL" else ("⚠" if status == "WARN" else "○"))
+        icon = "+" if status == "PASS" else ("X" if status == "FAIL" else ("!" if status == "WARN" else "-"))
         print(f"\n{icon} [{status}] {check}")
         print(f"  {detail}")
 
@@ -232,10 +232,10 @@ def validate(projections, retirement_year=12):
     print(f"Results: {passed} passed, {failed} failed/warned, {len(results)} total")
 
     if failed > 0:
-        print("\n⚠ FIX THE FAILING CHECKS BEFORE PRESENTING RESULTS TO THE USER.")
+        print("\n! FIX THE FAILING CHECKS BEFORE PRESENTING RESULTS TO THE USER.")
         return False
     else:
-        print("\n✓ All checks passed. Model appears sound.")
+        print("\n+ All checks passed. Model appears sound.")
         return True
 
 if __name__ == "__main__":

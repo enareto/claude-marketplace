@@ -101,11 +101,17 @@ def run_backtest(projections, retirement_year=12, plan_horizon=30):
     first_ret = ret_data[0]
     starting_portfolio = first_ret["total_portfolio"]
 
-    # Determine allocation from first retirement year
-    # (or use default if not available)
-    stock_pct = 0.60
-    bond_pct = 0.35
-    cash_pct = 0.05
+    # Determine allocation from first retirement year, with default fallback
+    stock_pct = first_ret.get("stock_pct", first_ret.get("equity_pct", 0.60))
+    bond_pct = first_ret.get("bond_pct", 0.35)
+    cash_pct = first_ret.get("cash_pct", 0.05)
+
+    # Normalize to ensure they sum to 1.0
+    total_alloc = stock_pct + bond_pct + cash_pct
+    if total_alloc > 0 and abs(total_alloc - 1.0) > 0.01:
+        stock_pct /= total_alloc
+        bond_pct /= total_alloc
+        cash_pct /= total_alloc
 
     # Build spending/SS schedule from projections
     spending_schedule = {}

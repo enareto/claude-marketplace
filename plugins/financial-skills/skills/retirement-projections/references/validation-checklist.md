@@ -11,6 +11,8 @@ python scripts/validate_model.py projections.json [retirement_year]
 python scripts/historical_backtest.py projections.json [retirement_year] [plan_horizon]
 ```
 
+**Automation note:** Checks 1, 2, 3, 4, 5, 7, 8, and 9 are automated in `scripts/validate_model.py`. The remaining checks (6, 10, 11, 12) require manual review.
+
 ## Critical Checks (must pass)
 
 ### 1. Effective Tax Rate Sanity

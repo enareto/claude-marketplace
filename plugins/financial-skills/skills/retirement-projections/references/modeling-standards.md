@@ -1,5 +1,7 @@
 # Financial Modeling Standards — Technical Reference
 
+> **Bracket vintage: 2025.** Tax brackets, standard deduction, contribution limits, and FICA thresholds reflect 2025 tax law. These shift annually for inflation — inflate thresholds at ~2%/year for future projection years.
+
 This document contains the exact formulas and implementation patterns for retirement financial models. Everything here was derived from real modeling failures that produced materially wrong results.
 
 ## Table of Contents
