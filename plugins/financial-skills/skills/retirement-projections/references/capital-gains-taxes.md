@@ -1,5 +1,7 @@
 # Capital Gains Tax Reference
 
+> **Bracket vintage: 2025.** LTCG brackets and NIIT thresholds reflect 2025 tax law. Inflate thresholds at ~2%/year for future projection years.
+
 ## Why This Matters
 
 The previous model treated all withdrawals as ordinary income. This is correct for traditional 401(k)/IRA withdrawals, but **wrong for taxable account withdrawals**. Taxable accounts are subject to capital gains tax rates, which are substantially lower than ordinary income rates — and can even be **0%** for moderate-income retirees.
